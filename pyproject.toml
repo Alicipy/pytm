@@ -22,18 +22,20 @@ dependencies = [
 [project.urls]
 Homepage = "https://github.com/OWASP/pytm"
 
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5,<10.0.0",
+    "black>=25.9,<27.0",
+    "pdoc3>=0.11.6,<0.12.0",
+    "ruff>=0.15.11,<0.16.0",
+]
+
 [tool.poetry]
 packages = [{include = "pytm"}]
 include = [
     "pytm/images/*.png",
     "pytm/threatlib/threats.json",
 ]
-
-[tool.poetry.group.dev.dependencies]
-pytest = ">=8.3.5,<10.0.0"
-black = ">=25.9,<27.0"
-pdoc3 = "^0.11.6"
-ruff = "^0.15.11"
 
 [tool.ruff]
 target-version = "py311"
